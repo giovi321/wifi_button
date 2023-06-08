@@ -81,11 +81,11 @@ The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these
 Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
 Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
 ```
-- As said above, I'm using a touch sensor for a variety of reasons; touch sensors don't offer an analog output so you need a microcontroller (the Wemos D1 Mini) or, as I have chosen to do in order to reduce energy consumption of the device as I said above, use a phototransistor
-- The phototransistor is a very simple electronic component that has 2 inputs and 2 outputs:
-	- the two inputs are the anode (+) and cathode (-) of a LED encased in the package of the chip
-	- the two outputs are the Emitter and Collector of a transistor, to put it simple those two pins allow current to flow between the two pins
-- When the touch sensor is activated with your finger, it sends current to the phototransistor, activating the internal LED of the phototransistor and allowing current to pass between the emitter and the collector of the transistor
+- As mentioned earlier, a touch sensor does not provide an analog output. To interface it with a microcontroller like the Wemos D1 Mini, or in my case, to minimize energy consumption, I have opted to use a phototransistor
+- The phototransistor is a straightforward electronic component with two inputs and two outputs:
+	- the two inputs are the anode (+) and cathode (-) of a LED integrated in the package of the chip
+	- the two outputs are the Emitter and Collector of the transistor, to put it simple those two pins allow current to flow between the two pins when the phototransistor is "activated"
+- When the touch sensor is activated with your finger, it provides the phototransistor with current, enough to light the internal LED of the phototransistor, therefore allowing current to pass between the emitter and the collector of the transistor
   - When the current flows between the Emitter and the Collector, we are simply shorting the RST and GND pins of the Wemos D1 Mini, therefore waking it up
 
 
