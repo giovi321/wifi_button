@@ -40,6 +40,10 @@ Prices include shipping to Europe.
 - Circuit sketch
 ![Projects](https://github.com/giovi321/wifi_button/assets/6443515/e4a15226-3a31-4985-8bdc-a2b3c632ad7e)
 - 3D case - see the files in the dedicated folder of the repository
+![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
+![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
+![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/5aa3b782-1b2a-4216-b39c-ef8fe647e2d7)
+![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/9094013c-8715-4622-83c1-68e2a4e85942)
 
 # How does it work
 - The USB type C connector makes the device modern and easy to charge, but feel free to use any other type of connector
@@ -75,12 +79,6 @@ The assembly is extremly simple:
 - Solder the connector to the battery charger module and plug the battery
 - Stuff the rest of the electronics inside the dome and hot-glue them to the walls of the dome
 - Close the dome and use four M2.6 screws to secure it
-Below are pictures of the components comprising the case I have designed.
-![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
-![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
-![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/5aa3b782-1b2a-4216-b39c-ef8fe647e2d7)
-![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/9094013c-8715-4622-83c1-68e2a4e85942)
-
 
 ## Software
 - Install ESPHome on your Home Assistant server, if you haven't it yet.
