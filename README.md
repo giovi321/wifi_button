@@ -38,7 +38,7 @@ Prices include shipping to Europe.
 
 # Resources
 - Circuit sketch
-![Projects](https://github.com/giovi321/wifi_button/assets/6443515/e4a15226-3a31-4985-8bdc-a2b3c632ad7e)
+![Circuit](https://github.com/giovi321/wifi_button/assets/6443515/a64e4adf-8eef-4c46-9b9f-9a0fcfdb87d9)
 - 3D case - see the files in the dedicated folder of the repository
 ![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
 ![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
