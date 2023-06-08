@@ -32,7 +32,7 @@ Prices include shipping to Europe.
 - Photocoupler TLP570 [2.14] https://www.aliexpress.com/item/1005004627959174.html
 - Capacitive touch sensor [0.60€] https://www.aliexpress.com/item/32874585710.html
 - 2.54 mm 2 pin JST female connector for PCB [2.18€] https://www.aliexpress.com/item/32855763468.html
-- Screws M2.6 [17.55€] https://www.aliexpress.com/item/4001313436764.html
+- Autotapping screws M2.6 x 5mm [1.30€] (https://www.aliexpress.com/item/1005003330377202.html)
 - Breadboard [2.00€] https://whereveryouwanttogetit
 - 3D printed case (see the files attached below) [3.00€ in-house, 36.00€ outsourced from xometry.eu]
 
