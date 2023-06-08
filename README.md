@@ -62,18 +62,33 @@ Prices include shipping to Europe.
 
 
 # Building process
-# Hardware
+## Hardware
+### Electronics
 Just follow the schematics provided in the Resources chapter of the readme.
 I have chosen to use a breadboard because I am not patient enough to learn how to design a circuit.
 The other option, is to draw the circuit on a new PCB with a permanent marker and use acid to etch the circuit.
 
-# Software
+### Case
+The assembly is extremly simple:
+- hot glue the touch sensor to the top flat part of the dome (inside the dome, obviously) - the sensor can feel touch also through a thin layer of non conductive material (the layer of the top of the dome is 4mm thick)
+- Insert the USB type C connector from the bottom of the bottom plate and screw it in or glue it with cyanoacrylate glue
+- Solder the connector to the battery charger module and plug the battery
+- Stuff the rest of the electronics inside the dome and hot-glue them to the walls of the dome
+- Close the dome and use four M2.6 screws to secure it
+Below are pictures of the components comprising the case I have designed.
+![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
+![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
+![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/5aa3b782-1b2a-4216-b39c-ef8fe647e2d7)
+![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/9094013c-8715-4622-83c1-68e2a4e85942)
+
+
+## Software
 - Install ESPHome on your Home Assistant server, if you haven't it yet.
   - Instructions for hass.io installation: https://www.home-assistant.io/integrations/esphome/
   - Instruction for manual installation (the one I used because I'm masochistic): https://esphome.io/guides/installing_esphome.html
 - Install ESPHome dashboard (if you're not running hass.io), at the end you'll need to add a systemd service to autostart the dashboard: https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard 
 
-## ESPHome code
+### ESPHome code
 You can easily google how to connect the Wemos D1 Mini to your PC and program it with ESPHome.
 ```
 mqtt:
@@ -95,7 +110,7 @@ sensor:
     update_interval: 6000s
 ```
 
-## Home Assistant code
+### Home Assistant code
 Add the sensor for the battery
 ```
   - platform: template
