@@ -83,7 +83,7 @@ The assembly is extremly simple:
 ## Software
 - Install ESPHome on your Home Assistant server, if you haven't it yet.
   - Instructions for hass.io installation: https://www.home-assistant.io/integrations/esphome/
-  - Instruction for manual installation (the one I used because I'm masochistic): https://esphome.io/guides/installing_esphome.html
+  - Instruction for manual installation: https://esphome.io/guides/installing_esphome.html
 - Install ESPHome dashboard (if you're not running hass.io), at the end you'll need to add a systemd service to autostart the dashboard: https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard 
 
 ### ESPHome code
