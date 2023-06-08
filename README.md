@@ -49,6 +49,13 @@ Prices include shipping to Europe.
 - The USB type C connector makes the device modern and easy to charge, but feel free to use any other type of connector
 - The charger module keeps the battery charged and you safe from fire hazards, it is simply plug and play
 - we need a voltage sensor connected to one analog input of the Wemos D1 Mini in order to read the battery status and receive a notification on Home Assistant when it is about to die
+- The device is based on the Wemos D1 Mini (obviously a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; obviously there are more energy efficient solutions
+- In order to keep energy consumption low, we need to keep the Wemos D1 Mini in a deep-sleep state
+	- however, in deep sleep state the Wemos D1 Mini won't be able to read an input offered by the touch sensor
+	- therefore, I have opted to use the touch sensor to wake up the Wemos D1 Mini that will go in deep-sleep automatically every 60 seconds
+	- the Wemos D1 Mini will be configured to send two mqtt messages whenever it wakes up:
+		- one message with the battery voltage
+		- one message with "hey somebody touched the touch sensor"
 - 3.7v battery is the way to go to power the Wemos D1 Mini, and 2000 mAh fits the small design of the case; feel free to use a different amperage battery
    - I haven't tested it, but from my research online the power consumption of different versions of Wemos D1 Mini in deep-sleep mode powered from the 5v input (which is less efficient because there is a voltage regulator in the middle) can vary depending on the manufacturer (see table below)
    - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA, giving it a life of almost 399 days (the calculation steps are available below). If we take into consideration the best case scenario, that is 78µA consumption, the battery would last almost 3x: 1,068 days
@@ -71,13 +78,6 @@ The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these
 Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
 Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
 ```
-- The device is based on the Wemos D1 Mini (obviously a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; obviously there are more energy efficient solutions
-- In order to keep energy consumption low, we need to keep the Wemos D1 Mini in a deep-sleep state
-	- however, in deep sleep state the Wemos D1 Mini won't be able to read an input offered by the touch sensor
-	- therefore, I have opted to use the touch sensor to wake up the Wemos D1 Mini that will go in deep-sleep automatically every 60 seconds
-	- the Wemos D1 Mini will be configured to send two mqtt messages whenever it wakes up:
-		- one message with the battery voltage
-		- one message with "hey somebody touched the touch sensor"
 - As said above, I'm using a touch sensor for a variety of reasons; touch sensors don't offer an analog output so you need a microcontroller (the Wemos D1 Mini) or, as I have chosen to do in order to reduce energy consumption of the device as I said above, use a phototransistor
 - The phototransistor is a very simple electronic component that has 2 inputs and 2 outputs:
 	- the two inputs are the anode (+) and cathode (-) of a LED encased in the package of the chip
