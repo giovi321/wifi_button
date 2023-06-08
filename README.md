@@ -54,7 +54,7 @@ Prices include shipping to Europe.
    - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA, giving it a life of almost 399 days (the calculation steps are available below). If we take into consideration the best case scenario, that is 78µA consumption, the battery would last almost 3x: 1,068 days
    - We are not taking into consideration the power consumption of the touch sensor, phototransistor and voltage sensor. The first two components have a very small consumption as it peaks mostly when you activate the touch sensor. For the voltage sensor I couldn't find anything online. In any case, even assuming an absurde value of 15% increase in power consumption, it's still a decent number of days.
    - I don't think I need to say that: i) these values are purely theorethical, the nominal rating of the battery does not equal its empirical performance; ii) the amount of times you will use the button will influence the duration of the battery
-   - Pro tip: if you desolder the LED that is installed on the touch sensor and replace it with a resistor, you save some precious µA
+   - Pro tip: if you desolder the LED that is installed on the touch sensor, you save some precious µA. However I haven't tried it and I don't know if it would affect the touch sensor functionality
 ```
           | WEMOS D1 MINI CLONE | WEMOS D1 MINI LOLIN | WEMOS D1 MINI WAVGAT |
 |:-------:|:-------------------:|:-------------------:|:--------------------:|
