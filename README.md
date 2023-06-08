@@ -13,13 +13,13 @@ as published by Sam Hocevar. See the LICENSE file for more details.
 ```
 
 # Features
-- minimalist design (i.e., no moving parts, fit with the design of my house)
-- no mechanical button (i.e., I just want to slap my hand on a big enough device while I'm laying on my bed)
+- Minimalist design (i.e., no moving parts, fit with the design of my house)
+- No mechanical button (i.e., I just want to slap my hand on a big enough device while I'm laying on my bed)
 - USB type C charging port (i.e., charge it with my laptop charger)
-- at least one year of battery (i.e., charge it once a year and forget about it)
+- At least one year of battery (i.e., charge it once a year and forget about it)
 - WiFi enabled, I don't want to configure also BLE on my Home Assistant device
-- Have a battery status (i.e., get a notification on Home Assistant when it needs to be charged)
-- Be as cheap as possible (this makes z-wave not an option)
+- Battery status (i.e., get a notification on Home Assistant when it needs to be charged)
+- As cheap as possible (this makes z-wave not an option)
 
 # Shopping list
 The items in the following links are just proposals, you can obviously source the exact same products wherever you prefer.
