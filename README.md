@@ -63,6 +63,7 @@ Prices include shipping to Europe.
    - I don't think I need to say that: i) these values are purely theorethical, the nominal rating of the battery does not equal its empirical performance; ii) the amount of times you will use the button will influence the duration of the battery
    - Pro tip: if you desolder the LED that is installed on the touch sensor, you save some precious µA. However I haven't tried it and I don't know if it would affect the touch sensor functionality
 ```
+Wemos D1 Mini power consumption table
           | WEMOS D1 MINI CLONE | WEMOS D1 MINI LOLIN | WEMOS D1 MINI WAVGAT |
 |:-------:|:-------------------:|:-------------------:|:--------------------:|
 | Minimum |        144 µA       |         75µA        |        206 µA        |
@@ -72,6 +73,7 @@ Prices include shipping to Europe.
 Source: https://programarfacil.com/esp8266/esp8266-deep-sleep-nodemcu-wemos-d1-mini/
 ```
 ```
+Battery life calculation steps
 To calculate the approximate duration of a battery with a given load, you can use the formula:
 Battery Life (in hours) = Battery Capacity (in mAh) / (Load Current (in µA) / 1000)
 The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these values into the formula:
