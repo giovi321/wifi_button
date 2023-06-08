@@ -50,13 +50,15 @@ Prices include shipping to Europe.
 - The charger module keeps the battery charged and you safe from fire hazards, it is simply plug and play
 - we need a voltage sensor connected to one analog input of the Wemos D1 Mini in order to read the battery status and receive a notification on Home Assistant when it is about to die
 - 3.7v battery is the way to go to power the Wemos D1 Mini, and 2000 mAh fits the small design of the case; feel free to use a different amperage battery
-   - I haven't tested it, but from my research online this is the power consumption of different versions of Wemos D1 Mini powered from the 5v input (which is less efficient because there is a voltage regulator in the middle
+   - I haven't tested it, but from my research online this is the power consumption of different versions of Wemos D1 Mini in deep-sleep mode powered from the 5v input (which is less efficient because there is a voltage regulator in the middle)
 ```
-|         | WEMOS D1 MINI CLONE | WEMOS D1 MINI LOLIN | WEMOS D1 MINI WAVGAT |
+          | WEMOS D1 MINI CLONE | WEMOS D1 MINI LOLIN | WEMOS D1 MINI WAVGAT |
 |:-------:|:-------------------:|:-------------------:|:--------------------:|
 | Minimum |        144 µA       |         75µA        |        206 µA        |
 | Maximum |        147 µA       |         80µA        |        214 µA        |
 | Average |        156 µA       |         78µA        |        209 µA        |
+
+Source: https://programarfacil.com/esp8266/esp8266-deep-sleep-nodemcu-wemos-d1-mini/
 ```
    - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA
    - The calculation steps are the following
