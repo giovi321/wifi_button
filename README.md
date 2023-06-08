@@ -50,7 +50,13 @@ Prices include shipping to Europe.
 - The charger module keeps the battery charged and you safe from fire hazards, it is simply plug and play
 - we need a voltage sensor connected to one analog input of the Wemos D1 Mini in order to read the battery status and receive a notification on Home Assistant when it is about to die
 - 3.7v battery is the way to go to power the Wemos D1 Mini, and 2000 mAh fits the small design of the case; feel free to use a different amperage battery
-   - I haven't tested it, but from my research online this is the power consumption of different versions of Wemos D1 Mini in deep-sleep mode powered from the 5v input (which is less efficient because there is a voltage regulator in the middle)
+   - I haven't tested it, but from my research online this is the power consumption of different versions of Wemos D1 Mini in deep-sleep mode powered from the 5v input (which is less efficient because there is a voltage regulator in the middle) [see table below]
+   - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA
+   - The calculation steps are available below
+   - If we take into consideration the best case, that is 78µA, the battery would last almost 3x: 1,068 days
+   - We are not taking into consideration the power consumption of the touch sensor, phototransistor and voltage sensor. The first two components have a very small consumption as it peaks mostly when you activate the touch sensor. For the voltage sensor I couldn't find anything online. In any case, even assuming an absurde value of 15% increase in power consumption, it's still a decent number of days.
+   - I don't think I need to say that: i) these values are purely theorethical, the nominal rating of the battery does not equal its empirical performance; ii) the amount of times you will use the button will influence the duration of the battery
+   - Pro tip: if you desolder the LED that is installed on the touch sensor and replace it with a resistor, you save some precious µA
 ```
           | WEMOS D1 MINI CLONE | WEMOS D1 MINI LOLIN | WEMOS D1 MINI WAVGAT |
 |:-------:|:-------------------:|:-------------------:|:--------------------:|
@@ -60,8 +66,6 @@ Prices include shipping to Europe.
 
 Source: https://programarfacil.com/esp8266/esp8266-deep-sleep-nodemcu-wemos-d1-mini/
 ```
-   - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA
-   - The calculation steps are the following
 ```
 To calculate the approximate duration of a battery with a given load, you can use the formula:
 Battery Life (in hours) = Battery Capacity (in mAh) / (Load Current (in µA) / 1000)
@@ -69,10 +73,6 @@ The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these
 Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
 Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
 ```
-   - If we take into consideration the best case, that is 78µA, the battery would last almost 3x: 1,068 days
-   - We are not taking into consideration the power consumption of the touch sensor, phototransistor and voltage sensor. The first two components have a very small consumption as it peaks mostly when you activate the touch sensor. For the voltage sensor I couldn't find anything online. In any case, even assuming an absurde value of 15% increase in power consumption, it's still a decent number of days.
-   - I don't think I need to say that: i) these values are purely theorethical, the nominal rating of the battery does not equal its empirical performance; ii) the amount of times you will use the button will influence the duration of the battery
-   - Pro tip: if you desolder the LED that is installed on the touch sensor and replace it with a resistor, you save some precious µA
 - The device is based on the Wemos D1 Mini (obviously a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; obviously there are more energy efficient solutions
 - In order to keep energy consumption low, we need to keep the Wemos D1 Mini in a deep-sleep state
 	- however, in deep sleep state the Wemos D1 Mini won't be able to read an input offered by the touch sensor
