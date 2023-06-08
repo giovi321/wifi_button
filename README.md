@@ -72,6 +72,7 @@ Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
    - If we take into consideration the best case, that is 78µA, the battery would last almost 3x: 1,068 days
    - We are not taking into consideration the power consumption of the touch sensor, phototransistor and voltage sensor. The first two components have a very small consumption as it peaks mostly when you activate the touch sensor. For the voltage sensor I couldn't find anything online. In any case, even assuming an absurde value of 15% increase in power consumption, it's still a decent number of days.
    - I don't think I need to say that: i) these values are purely theorethical, the nominal rating of the battery does not equal its empirical performance; ii) the amount of times you will use the button will influence the duration of the battery
+   - Pro tip: if you desolder the LED that is installed on the touch sensor and replace it with a resistor, you save some precious µA
 - The device is based on the Wemos D1 Mini (obviously a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; obviously there are more energy efficient solutions
 - In order to keep energy consumption low, we need to keep the Wemos D1 Mini in a deep-sleep state
 	- however, in deep sleep state the Wemos D1 Mini won't be able to read an input offered by the touch sensor
