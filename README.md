@@ -114,12 +114,15 @@ The assembly is extremly simple:
 You can easily google how to connect the Wemos D1 Mini to your PC and program it with ESPHome.
 ```
 mqtt:
-  broker: 192.168.1.65
+  broker: 192.168.1.100
   username: yourmqttusername
   password: yourmqttpassword
   birth_message:
-    topic: anythingyouwant
-    payload: anything you want
+    topic: esphome/something_here
+    payload: "on"
+
+deep_sleep:
+  run_duration: 10s
 
 sensor:
   - platform: adc
@@ -143,16 +146,20 @@ Add the sensor for the battery
         unit_of_measurement: "%"
         value_template: >
             {{ ((states('sensor.esp12f_battery')|float-2.64)/0.0156)|round(2) }}
+
+TBU
+
 ```
 
-Add the sensor for the button
+Add the automation to trigger the light when you press the button
 ```
-TBU
-```
-
-Add the automation for the button push
-```
-TBU
+- alias: bedside_light_switch_1
+  trigger:
+  - platform: mqtt
+    topic: esphome/bedside_light_switch_1
+    payload: 'on'
+  action: [add some actions here]
+  mode: single
 ```
 
 Add  a notification on low battery
