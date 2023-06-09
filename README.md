@@ -1,4 +1,4 @@
-This is a cheap customizable WiFi-enabled battery-operated touch button with no moving parts that relies on ESPHome and is designed to be used with Home Assistant.
+This is a cheap, customizable, WiFi-enabled, battery-operated touch button with no moving parts that relies on ESPHome and is designed to be used with Home Assistant.
 It is designed to be long-lasting both in terms of durability and battery life and easy to build & operate
 
 THIS IS A DRAFT
@@ -27,7 +27,7 @@ The items in the following links are just proposals, you can obviously source th
 Prices include shipping to Europe.
 - Voltage sensor [1.74€] https://www.aliexpress.com/item/1005005106676499.html
 - Wemos D1 Mini [3.33€] https://www.aliexpress.com/item/32651747570.html
-- USB plug[1.77€] https://www.aliexpress.com/item/1005005476223469.html
+- USB plug [1.77€] https://www.aliexpress.com/item/1005005476223469.html
 - USB type C charging circuit [1.87€] https://www.aliexpress.com/item/1005005227218470.html
 - Battery 2000mAh [5.44€] https://www.aliexpress.com/item/1005002919536938.html
 - Photocoupler TLP570 [2.14] https://www.aliexpress.com/item/1005004627959174.html
