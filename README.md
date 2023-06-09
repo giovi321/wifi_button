@@ -76,10 +76,10 @@ Source: https://programarfacil.com/esp8266/esp8266-deep-sleep-nodemcu-wemos-d1-m
 ```
 Battery life calculation steps
 To calculate the approximate duration of a battery with a given load, you can use the formula:
-Battery Life (in hours) = Battery Capacity (in mAh) / (Load Current (in µA) / 1000)
+	Battery Life (in hours) = Battery Capacity (in mAh) / (Load Current (in µA) / 1000)
 The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these values into the formula:
-Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
-Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
+	Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
+	Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
 ```
 - As mentioned earlier, a touch sensor does not provide an analog output. To use it, you need to interface it with a microcontroller like the Wemos D1 Mini, or in our case, to minimize energy consumption, we can opt to use a phototransistor
 - The phototransistor is a straightforward electronic component with two inputs and two outputs:
