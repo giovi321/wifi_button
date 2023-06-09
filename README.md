@@ -81,7 +81,7 @@ The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these
 Battery Life = 2000 mAh / (209 µA / 1000) ≈ 9569.38 hours
 Battery Life in days = 9569.38 hours / 24 ≈ 398.72 days
 ```
-- As mentioned earlier, a touch sensor does not provide an analog output. To interface it with a microcontroller like the Wemos D1 Mini, or in my case, to minimize energy consumption, I have opted to use a phototransistor
+- As mentioned earlier, a touch sensor does not provide an analog output. To use it, you need to interface it with a microcontroller like the Wemos D1 Mini, or in our case, to minimize energy consumption, we can opt to use a phototransistor
 - The phototransistor is a straightforward electronic component with two inputs and two outputs:
 	- the two inputs are the anode (+) and cathode (-) of a LED integrated in the package of the chip
 	- the two outputs are the Emitter and Collector of the transistor, to put it simple those two pins allow current to flow between the two pins when the phototransistor is "activated"
