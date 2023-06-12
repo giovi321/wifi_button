@@ -118,7 +118,7 @@ mqtt:
   username: yourmqttusername
   password: yourmqttpassword
   birth_message:
-    topic: esphome/something_here
+    topic: esphome/bedside_light_switch_1
     payload: "on"
 
 deep_sleep:
@@ -127,12 +127,11 @@ deep_sleep:
 sensor:
   - platform: adc
     pin: A0
-    name: Battery
+    name: "Bedside light switch 1 battery"
     id: battery_voltage_12f
     filters:
       - multiply: 4.79
     accuracy_decimals: 3
-    update_interval: 6000s
 ```
 
 ### Home Assistant code
@@ -140,12 +139,12 @@ Add the sensor for the battery
 ```
   - platform: template
     sensors:
-      esp12f_battery_fullness:
-        friendly_name: ESP12f Battery Capacity
+      bedside_light_switch_1_battery:
+        friendly_name: "Bedside light switch 1 battery"
         device_class: battery
         unit_of_measurement: "%"
         value_template: >
-            {{ ((states('sensor.esp12f_battery')|float-2.64)/0.0156)|round(2) }}
+            {{ ((states('sensor.bedside_light_switch_1_battery')|float-2.64)/0.0156)|round(2) }}
 
 TBU
 
