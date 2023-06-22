@@ -38,13 +38,13 @@ Prices include shipping to Europe.
 - Optional: [PCB mounted micro switch 90°](https://www.aliexpress.com/item/1005005338134247.html), if you don't require the switch, you can place a jumper in place of the switch in the board [3.15€]
 
 - Options for PCB:
- - Breadbord (make your own design) [3€]
- - PCB I have designed
-   - Soon available for purchase on eBay [8€]
-   - Print your own on allpcb.com [19€]
-- 3D printed case (see the .stl files in this repository)
-  -  Print it yourself [c. 3€]
-  -  Print it on xometry.eu[c. 36€]
+  - Breadbord (make your own design) [3€]
+  - PCB I have designed
+    - Soon available for purchase on eBay [8€]
+    - Print your own on allpcb.com [19€]
+ - 3D printed case (see the .stl files in this repository)
+   -  Print it yourself [c. 3€]
+   -  Print it on xometry.eu[c. 36€]
 
 # Resources
 - Circuit sketch
