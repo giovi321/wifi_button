@@ -34,7 +34,7 @@ Prices include shipping to Europe.
 - [180k ohm resistor](https://aliexpress.com/item/1005004562905294.html) [2.55€]
 - [Autotapping screws M2.6 x 5mm](https://www.aliexpress.com/item/1005003330377202.html)  [1.30€]
 - Optional: [Screw connector for PCB](https://www.aliexpress.com/item/4001283309384.html), if you want you can solder the battery directly to the PCB/breadboard [1.90€]
-- Optional: [PCB pin header strip](https://www.aliexpress.com/item/1005003541838313.html), if you want you can solder the battery directly to the PCB/breadboard [1.17€]
+- Optional: [PCB pin header strip](https://www.aliexpress.com/item/1005003541838313.html), if you want you can solder the cables that connect the touch sensor directly to the PCB/breadboard [1.17€]
 - Optional: [PCB mounted micro switch 90°](https://www.aliexpress.com/item/1005005338134247.html), if you don't require the switch, you can place a jumper in place of the switch in the board [3.15€]
 
 - Options for PCB:
