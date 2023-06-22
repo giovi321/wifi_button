@@ -4,7 +4,7 @@ It is designed to be long-lasting both in terms of durability and battery life a
 THIS IS A DRAFT
 
 # License
-The content of this repository is licensed under the WTFPL.
+The content of this repository is licensed under the [WTFPL](http://www.wtfpl.net/).
 
 ```
 Copyright © 2023 giovi321
