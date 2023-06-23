@@ -38,13 +38,13 @@ Prices include shipping to Europe.
 - Optional: [PCB mounted micro switch 90°](https://www.aliexpress.com/item/1005005338134247.html), if you don't require the switch, you can place a jumper in place of the switch in the board [3.15€]
 
 - Options for PCB:
-  - Breadbord (make your own design) [3€]
+  - Breadbord (make your own design) [c. 3€]
   - PCB I have designed
-    - Soon available for purchase on eBay [8€]
-    - Print your own on allpcb.com [19€]
+    - Soon available for purchase on eBay [10€ cad., 3€ for additional boards]
+    - Print your own on [allpcb](https://www.allpcb.com/?Mb_InviteId=60399) [c. 30€], see the Gerber files in the repository
  - 3D printed case (see the .stl files in this repository)
    -  Print it yourself [c. 3€]
-   -  Print it on xometry.eu[c. 36€]
+   -  Print it on xometry.eu [c. 36€]
 
 # Resources
 - Circuit sketch
@@ -101,26 +101,25 @@ The battery capacity is 2000 mAh and the load current is 209 µA. Plugging these
 # Building process
 ## Hardware
 ### Electronics
-Just follow the schematics provided in the Resources chapter of the readme.
-I have chosen to use a breadboard because I am not patient enough to learn how to design a circuit.
-The other option, is to draw the circuit on a new PCB with a permanent marker and use acid to etch the circuit.
+Just follow the schematics provided in the Resources chapter of the readme to build your own breadbord, otherwise simply solder the components on the PCB ordered either from me or another producer.
 
 ### Case
 The assembly is extremly simple:
-- hot glue the touch sensor to the top flat part of the dome (inside the dome, obviously) - the sensor can feel touch also through a thin layer of non conductive material (the layer of the top of the dome is 4mm thick)
+- Hot glue the touch sensor to the top flat part of the dome (inside the dome, obviously) - the sensor can feel touch also through a thin layer of non conductive material (the layer of the top of the dome is 4mm thick)
 - Insert the USB type C connector from the bottom of the bottom plate and screw it in or glue it with cyanoacrylate glue
 - Solder the connector to the battery charger module and plug the battery
-- Stuff the rest of the electronics inside the dome and hot-glue them to the walls of the dome
+- Hot-glue the main circuit board to the bottom plate that closes the case
 - Close the dome and use four M2.6 screws to secure it
 
 ## Software
 - Install ESPHome on your Home Assistant server, if you haven't it yet.
   - Instructions for hass.io installation: https://www.home-assistant.io/integrations/esphome/
   - Instruction for manual installation: https://esphome.io/guides/installing_esphome.html
-- Install ESPHome dashboard (if you're not running hass.io), at the end you'll need to add a systemd service to autostart the dashboard: https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard 
+    - Install ESPHome dashboard (if you're not running hass.io), at the end you'll need to add a systemd service to autostart the dashboard: https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard 
 
 ### ESPHome code
 You can easily google how to connect the Wemos D1 Mini to your PC and program it with ESPHome.
+ATTENTION: remember to switch off the main circuit board (or unplug the battery, if you didn't include the switch) before connecting the Wemos D1 Mini to the computer via USB!
 ```
 mqtt:
   broker: 192.168.1.100
@@ -156,7 +155,6 @@ Add the sensor for the battery
             {{ ((states('sensor.bedside_light_switch_1_battery')|float-2.64)/0.0156)|round(2) }}
 
 TBU
-
 ```
 
 Add the automation to trigger the light when you press the button
