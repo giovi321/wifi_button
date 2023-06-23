@@ -59,15 +59,15 @@ Prices include shipping to Europe.
 # How does it work
 - The USB type C connector makes the device modern and easy to charge, but feel free to use any other type of connector
 - The charger module keeps the battery charged and you safe from fire hazards, it is simply plug and play
-- we need a voltage sensor connected to one analog input of the Wemos D1 Mini in order to read the battery status and receive a notification on Home Assistant when it is about to die
-- The device is based on the Wemos D1 Mini (obviously a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; obviously there are more energy efficient solutions
+- The device is based on the Wemos D1 Mini (I'm using a cheap clone, even though a branded one would be better for lower energy consumption) and ESPHome because they are very easy to use; certainly there are more energy efficient solutions
+- We need a voltage sensor connected to one analog input of the Wemos D1 Mini in order to read the battery status and receive a notification on Home Assistant when it is about to die. To do this, we take advantage of the integrated voltage divider of the pin A0 of the Wemos D1 Mini, which can support up to 3.3 volts input. Since we are providing a 5 volts input, we need to add a 180kohm resistor
 - In order to keep energy consumption low, we need to keep the Wemos D1 Mini in a deep-sleep state
 	- however, in deep sleep state the Wemos D1 Mini won't be able to read an input offered by the touch sensor
-	- therefore, I have opted to use the touch sensor to wake up the Wemos D1 Mini that will go in deep-sleep automatically every 60 seconds
+	- therefore, I have opted to use the touch sensor to wake up the Wemos D1 Mini that will go in deep-sleep automatically every 10 seconds
 	- the Wemos D1 Mini will be configured to send two mqtt messages whenever it wakes up:
 		- one message with the battery voltage
 		- one message with "hey somebody touched the touch sensor"
-- 3.7v battery is the way to go to power the Wemos D1 Mini, and 2000 mAh fits the small design of the case; feel free to use a different amperage battery
+- 3.7v battery is the way to go to power the Wemos D1 Mini, and 2000 mAh fits the small design of the case; feel free to use a different amperage battery. It provides up to 1.5 years of uptime on a single charge (it can vary, see the dedicated section of this file)
    - I haven't tested it, but from my research online the power consumption of different versions of Wemos D1 Mini in deep-sleep mode powered from the 5v input (which is less efficient because there is a voltage regulator in the middle) can vary depending on the manufacturer (see table below)
    - Assuming we are unlucky and got the worse energy-performing Wemos D1 Mini, the average consumption is 69.47mA, giving it a life of almost 399 days (the calculation steps are available below). If we take into consideration the best case scenario, that is 78µA consumption, the battery would last almost 3x: 1,068 days
    - We are not taking into consideration the power consumption of the touch sensor, phototransistor and voltage sensor. The first two components have a very small consumption as it peaks mostly when you activate the touch sensor. For the voltage sensor I couldn't find anything online. In any case, even assuming an absurde value of 15% increase in power consumption, it's still a decent number of days.
