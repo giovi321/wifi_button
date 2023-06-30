@@ -113,14 +113,54 @@ The assembly is extremly simple:
 - Close the dome and use four M2.6 screws to secure it
 
 ## Software
-- Install ESPHome on your Home Assistant server, if you haven't it yet.
-  - Instructions for hass.io installation: https://www.home-assistant.io/integrations/esphome/
-  - Instruction for manual installation: https://esphome.io/guides/installing_esphome.html
-    - Install ESPHome dashboard (if you're not running hass.io), at the end you'll need to add a systemd service to autostart the dashboard: https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard 
+### Install ESPHome
+There are three ways to install ESPHome:
+- If you have hass.io (the official home-assistant OS), follow [this guide](https://www.home-assistant.io/integrations/esphome/)
+- If you are running any other version of home-assistant such as a venv or docker you have the following two options:
+  - Use docker, following [this guide](https://esphome.io/guides/installing_esphome.html)
+  - Install it in a python venv following the simple steps below or follow [this guide](https://esphome.io/guides/installing_esphome.html)
+```
+python3 -m venv esphome
+source esphome/bin/activate
+pip3 install esphome
+```
+Check that ESPHome has been installed correctly:
+```
+esphome version
+```
+If you're not running hass.io, you can install ESPHome dashboard by following the steps below or [this guide](https://esphome.io/guides/getting_started_command_line.html?highlight=dashboard+install#bonus-esphome-dashboard)
+
+```esphome dashboard config/
+pip install tornado esptool
+```
+Test the installation:`esphome dashboard config/`
+Create a new systemd service to run the dashboard automatically by issuing (as root) `nano /etc/systemd/system/esphome.service`.
+Now put this in the file, close and save it.
+```
+[Unit]
+Description=ESPHome Dashboard
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/root/esphome/bin/esphome config/ dashboard
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+Issue the following:
+```
+systemctl --system daemon-reload
+systemctl enable esphome.service
+```
+Then check if the service is running by issuing `service esphome status`.
+
 
 ### ESPHome code
-You can easily google how to connect the Wemos D1 Mini to your PC and program it with ESPHome.
 ATTENTION: remember to switch off the main circuit board (or unplug the battery, if you didn't include the switch) before connecting the Wemos D1 Mini to the computer via USB!
+
 ```
 mqtt:
   broker: 192.168.1.100
