@@ -202,6 +202,7 @@ So with those numbers (they might vary depending on the Wemos D1 Mini brand and 
 ### Home Assistant code
 Add the sensor for the battery to convert voltage to percentage (edit configuration.yaml)
 ```
+sensor:
   - platform: template
     sensors:
       bedside_light_switch_1_battery:
