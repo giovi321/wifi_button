@@ -38,7 +38,7 @@ Prices include shipping to Europe.
 - Options for PCB:
   - Breadbord (make your own design) [c. 3€]
   - PCB I have designed
-    - Soon available for purchase [here](https://www.buymeacoffee.com/giovi321/e/147823) [15€ cad., 3€ for additional boards]
+    - Available for purchase [here](https://www.buymeacoffee.com/giovi321/e/147823) [15€ cad., 3€ for additional boards]
     - Print your own on [allpcb](https://www.allpcb.com/?Mb_InviteId=60399) [c. 30€ excl. import taxes], see the Gerber files in the repository
  - 3D printed case (see the .stl files in this repository)
    -  Print it yourself [c. 3€]
