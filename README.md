@@ -1,4 +1,4 @@
-This is a cheap, customizable, WiFi-enabled, battery-operated touch button with no moving parts that relies on ESPHome and is designed to be used with Home Assistant.
+This is a cheap, customizable, WiFi-enabled, battery-operated, ultra-low power consumption touch button with no moving parts that relies on ESPHome and is designed to be used with Home Assistant.
 It is designed to be long-lasting both in terms of durability and battery life and easy to build & operate
 
 THIS IS A DRAFT
