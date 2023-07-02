@@ -213,9 +213,7 @@ sensor:
         unit_of_measurement: "%"
         value_template: >
           {% set voltage = states('sensor.bedside_light_button_1_bedside_light_button_1_battery')|float %}
-          {% if voltage > 3.85 %}
-            charging
-          {% elif voltage < 2.64 %}
+          {% if voltage < 2.64 %}
             0
           {% else %}
             {% set range_voltage = 3.85 - 2.64 %}
