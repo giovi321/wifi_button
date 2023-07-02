@@ -252,7 +252,7 @@ Add  a notification on low battery (edit automations.yaml):
 
 # Buy me a coffee!
 Did you like the wifi-button? Buy me a coffee!
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="giovi321" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/giovi321)
 
 # The outcome
 The final result:
