@@ -1,5 +1,9 @@
 This is a cheap, customizable, WiFi-enabled, battery-operated, ultra-low power consumption touch button with no moving parts that relies on ESPHome and is designed to be used with Home Assistant.
-It is designed to be long-lasting both in terms of durability and battery life and easy to build & operate
+It is designed to be long-lasting both in terms of durability and battery life and easy to build & operate.
+
+Did you like the project?
+
+[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/giovi321)
 
 # License
 The content of this repository is licensed under the [WTFPL](http://www.wtfpl.net/).
@@ -247,11 +251,6 @@ Add  a notification on low battery (edit automations.yaml):
       title: Bedside light 1 low battery
   mode: single
 ```
-
-# Buy me a coffee!
-Did you like the wifi-button? Buy me a coffee!
-
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/giovi321)
 
 # The outcome
 The final result:
