@@ -201,18 +201,28 @@ So with those numbers (they might vary depending on the Wemos D1 Mini brand and 
 
 ### Home Assistant code
 Add the sensor for the battery to convert voltage to percentage (edit configuration.yaml)
+Remember to change the name of the sensor `sensor.bedside_light_button_1_bedside_light_button_1_battery` to your sensor's name.
+The values shown in this code snipped apply to 3.7v lithium batteries.
 ```
 sensor:
   - platform: template
     sensors:
-      bedside_light_switch_1_battery:
-        friendly_name: "Bedside light switch 1 battery"
+      bedside_light_button_1_battery_percentage:
+        friendly_name: "Bedside light button 1 battery percentage"
         device_class: battery
         unit_of_measurement: "%"
         value_template: >
-            {{ ((states('sensor.bedside_light_switch_1_battery')|float-2.64)/0.0156)|round(2) }}
-
-TBU
+          {% set voltage = states('sensor.bedside_light_button_1_bedside_light_button_1_battery')|float %}
+          {% if voltage > 3.85 %}
+            charging
+          {% elif voltage < 2.64 %}
+            0
+          {% else %}
+            {% set range_voltage = 3.85 - 2.64 %}
+            {% set range_percentage = 100 %}
+            {% set battery_percentage = ((voltage - 2.64) / range_voltage) * range_percentage %}
+            {{ battery_percentage | round(0) }}
+          {% endif %}
 ```
 
 Add the automation to trigger the light when you press the button (edit automations.yaml):
