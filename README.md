@@ -252,6 +252,7 @@ Add  a notification on low battery (edit automations.yaml):
 
 # Buy me a coffee!
 Did you like the wifi-button? Buy me a coffee!
+
 [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/giovi321)
 
 # The outcome
