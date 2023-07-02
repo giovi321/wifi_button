@@ -179,12 +179,28 @@ sensor:
     name: "Bedside light switch 1 battery"
     id: battery_voltage_12f
     filters:
-      - multiply: 4.79
+      - multiply: 4.511904762
     accuracy_decimals: 3
 ```
+ATTENTION: to calculate the 4.511904762 value (second line from the bottom of the code snippet for ESPHome) you need to:
+- measure the battery voltage with a multimeter when the device is running (i.e., not in deep-sleep mode)
+- set the value to 1 like this: `multiply: 1`
+- check what value is reported on home assistant from the device
+- do a very simple proportion:
+```
+a:b=c:x
+b*c/a=x
+a=the reported voltage from home assistant
+b=the multiplier you set (1)
+c=the voltage measured by your multimeter
+
+0.840:1=3.79:x
+1*3.79/0.840=4.511904762
+```
+So with those numbers (they might vary depending on the Wemos D1 Mini brand and the battery type) the multiplier we need to set is 4.511904762.
 
 ### Home Assistant code
-Add the sensor for the battery
+Add the sensor for the battery to convert voltage to percentage (edit configuration.yaml)
 ```
   - platform: template
     sensors:
@@ -198,20 +214,31 @@ Add the sensor for the battery
 TBU
 ```
 
-Add the automation to trigger the light when you press the button
+Add the automation to trigger the light when you press the button (edit automations.yaml):
 ```
 - alias: bedside_light_switch_1
+  description: 'Turn on bedside table lamp on button touch'
   trigger:
   - platform: mqtt
     topic: esphome/bedside_light_switch_1
     payload: 'on'
-  action: [add some actions here]
   mode: single
 ```
 
-Add  a notification on low battery
+Add  a notification on low battery (edit automations.yaml):
 ```
-TBU
+- alias: Bedside light 1 low battery
+  description: 'Send notification if bedside light button battery is below 10%'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.bedside_light_button_1_battery
+    below: 10
+  action:
+  - service: notify.persistent_notification
+    data:
+      message: The battery of bedside light 1 is low. Please charge.
+      title: Bedside light 1 low battery
+  mode: single
 ```
 
 # The outcome
