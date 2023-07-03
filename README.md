@@ -258,7 +258,6 @@ The final result:
 
 The bare metal device:
 <img src="[https://mma.prnewswire.com/media/1513369/Educative_Logo.jpg](https://user-images.githubusercontent.com/6443515/250400706-9bc13564-ead0-46ce-8924-6469bd61dd8b.png)"  width="50%" height="50%">
-![image | width=50](https://github.com/giovi321/wifi_button/assets/6443515/64da228e-b42b-4f29-9183-e1def4d3971b)
 
 The early prototype:
 ![image](https://github.com/giovi321/wifi_button/assets/6443515/9bc13564-ead0-46ce-8924-6469bd61dd8b)
