@@ -257,7 +257,7 @@ The final result:
 [Piucture TBU]
 
 The bare metal device:
-![image](https://github.com/giovi321/wifi_button/assets/6443515/64da228e-b42b-4f29-9183-e1def4d3971b)
+![image|570x434, 50%](https://github.com/giovi321/wifi_button/assets/6443515/64da228e-b42b-4f29-9183-e1def4d3971b)
 
 The early prototype:
 ![image](https://github.com/giovi321/wifi_button/assets/6443515/9bc13564-ead0-46ce-8924-6469bd61dd8b)
