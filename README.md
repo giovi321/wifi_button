@@ -52,11 +52,12 @@ Prices include shipping to Europe.
 - Circuit schematic - see the files in the "PCB" folder of the repository
 ![Schematic](https://github.com/giovi321/wifi_button/assets/6443515/69339dc0-75fa-4347-9059-0b09e5a07b0d)
 
-- 3D case - see the files in the "3D stl" folder of the repository
+- 3D case - see the files in the "3D stl" folder of the repository and check the README.md file in that folder
 ![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
 ![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
-![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/5aa3b782-1b2a-4216-b39c-ef8fe647e2d7)
-![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/9094013c-8715-4622-83c1-68e2a4e85942)
+![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/b91f9663-32b6-48a8-891b-53f27d548d99)
+![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/dc6fcdbc-b1df-4df8-bbbe-b9067affe117)
+
 
 # How does it work
 - The USB type C connector makes the device modern and easy to charge, but feel free to use any other type of connector
