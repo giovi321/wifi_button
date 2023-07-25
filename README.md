@@ -109,10 +109,11 @@ Just follow the schematics provided in the Resources chapter of the readme to bu
 
 ### Case
 The assembly is extremly simple:
-- Hot glue the touch sensor to the top flat part of the dome (inside the dome, obviously) - the sensor can feel touch also through a thin layer of non conductive material (the layer of the top of the dome is 4mm thick)
-- Insert the USB type C connector from the bottom of the bottom plate and screw it in or glue it with cyanoacrylate glue
+- Using a flat cutter, trim the pins protruding from the PCB of the touch sensor in order to make in more flat and therefore make sure it sticks closely to the top of the case
+- Hot glue the touch sensor to the top flat part of the dome (inside the dome, obviously) - the sensor can feel touch also through a thin layer of non conductive material (the layer of the top of the dome is 1mm thick)
+- Insert the USB type C connector from the bottom of the bottom plate and glue it with cyanoacrylate glue
 - Solder the connector to the battery charger module and plug the battery
-- Hot-glue the main circuit board to the bottom plate that closes the case
+- Place the PCB on the stands of the bottom part of the case (if you wish, you can melt with a hot flat-head screwdriver the plastic to keep the PCB in place)
 - Close the dome and use four M2.6 screws to secure it
 
 ## Software
