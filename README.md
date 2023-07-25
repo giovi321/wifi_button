@@ -53,10 +53,10 @@ Prices include shipping to Europe.
 ![Schematic](https://github.com/giovi321/wifi_button/assets/6443515/69339dc0-75fa-4347-9059-0b09e5a07b0d)
 
 - 3D case - see the files in the "3D stl" folder of the repository and check the README.md file in that folder
-![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/5813c38f-b581-444f-836f-050e6ff17dc5)
-![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/1286280e-becd-4afa-8b9c-e91157d0610c)
-![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/b91f9663-32b6-48a8-891b-53f27d548d99)
-![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/dc6fcdbc-b1df-4df8-bbbe-b9067affe117)
+![Top 1](https://github.com/giovi321/wifi_button/assets/6443515/d713faee-5ab7-40d5-ad9c-27dad9a981c0)
+![Top 2](https://github.com/giovi321/wifi_button/assets/6443515/c6a74f0a-f40d-4e8d-9303-d6012790fc50)
+![Bottom 1](https://github.com/giovi321/wifi_button/assets/6443515/bcf9d163-5404-4ef7-a942-1d7b0b169a9b)
+![Bottom 2](https://github.com/giovi321/wifi_button/assets/6443515/7f864ada-3408-4a04-8c3a-e536d5071c6a)
 
 
 # How does it work
